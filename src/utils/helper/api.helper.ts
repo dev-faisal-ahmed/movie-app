@@ -9,6 +9,7 @@ export const apiUrl = {
   movieDetails: (movieId: string) => `${baseUrl}/movie/${movieId}`,
   movieCredits: (movieId: string) => `${baseUrl}/movie/${movieId}/credits`,
   personDetails: (personId: string) => `${baseUrl}/credit/${personId}`,
+  similarMovies: (movieId: string) => `${baseUrl}/movie/${movieId}/similar`,
 };
 
 export const getPoster = (path: string, width: number) => {

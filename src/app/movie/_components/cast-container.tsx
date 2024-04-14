@@ -19,10 +19,10 @@ export function CastContainer({
           source={{ uri: getPoster(profile_path, 300) }}
         />
         <Text className="text-neutral-300 text-center mt-2">
-          {truncate(name, 15)}
+          {truncate(name || '', 15)}
         </Text>
         <Text className="text-neutral-400 text-xs text-center mt-1">
-          {truncate(character, 18)}
+          {truncate(character || '', 18)}
         </Text>
       </View>
     </Link>
