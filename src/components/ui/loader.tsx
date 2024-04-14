@@ -9,7 +9,7 @@ export function Loader() {
   return (
     <View
       style={{ height: height - 150 }}
-      className="justify-center items-center"
+      className="justify-center items-center fixed top-0 left-0 bg-neutral-700/40"
     >
       <Text>
         <CircleSnail color={colors.text} size={120} />;

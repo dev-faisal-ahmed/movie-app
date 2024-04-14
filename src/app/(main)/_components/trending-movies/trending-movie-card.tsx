@@ -8,7 +8,7 @@ const { height, width } = getDimension();
 
 export function TrendingMovieCard({ poster_path, id }: TTrendingMovie) {
   return (
-    <Link href={`movies/${id}`}>
+    <Link href={`movie/${id}`}>
       <View style={{ width: width * 0.6 }}>
         <Image
           className="rounded-xl"

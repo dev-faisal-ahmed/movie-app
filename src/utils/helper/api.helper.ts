@@ -4,6 +4,8 @@ const imageUrl = `https://image.tmdb.org/t/p`;
 
 export const apiUrl = {
   trending: `${baseUrl}/trending/movie/day`,
+  upcoming: `${baseUrl}/movie/upcoming`,
+  top_rated: `${baseUrl}/movie/top_rated`,
 };
 
 export const getPoster = (path: string, width: number) => {
