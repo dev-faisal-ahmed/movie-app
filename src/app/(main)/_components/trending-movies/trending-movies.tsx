@@ -8,10 +8,9 @@ import { TrendingMovieCard } from './trending-movie-card';
 export function TrendingMovies() {
   const { data, loading } = useFetch<TTrendingMovieResponse>(apiUrl.trending);
 
-  if (loading) return <Loader />;
-
   return (
-    <View className="flex-1 mt-6 mb-2">
+    <View className="relative flex-1 mt-6 mb-2">
+      {loading && <Loader />}
       <Text className="text-lg font-bold text-white mb-2">Trending</Text>
       <FlatList
         horizontal

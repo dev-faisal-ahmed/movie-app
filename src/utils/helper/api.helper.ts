@@ -6,6 +6,9 @@ export const apiUrl = {
   trending: `${baseUrl}/trending/movie/day`,
   upcoming: `${baseUrl}/movie/upcoming`,
   top_rated: `${baseUrl}/movie/top_rated`,
+  movieDetails: (movieId: string) => `${baseUrl}/movie/${movieId}`,
+  movieCredits: (movieId: string) => `${baseUrl}/movie/${movieId}/credits`,
+  personDetails: (personId: string) => `${baseUrl}/credit/${personId}`,
 };
 
 export const getPoster = (path: string, width: number) => {

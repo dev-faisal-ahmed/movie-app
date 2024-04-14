@@ -6,6 +6,7 @@ import { Link } from 'expo-router';
 import { FlatList, Text, View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
 import { MovieCard } from './movie-card';
+import { Loader } from '@/components/ui/loader';
 
 type MovieListProps = {
   title: string;
@@ -17,7 +18,8 @@ export function MovieList({ title, customClass, categoryId }: MovieListProps) {
   const { data, loading } = useFetch<TMovieListResponse>(apiUrl[categoryId]);
 
   return (
-    <View className={twMerge('', customClass)}>
+    <View className={twMerge('relative', customClass)}>
+      {loading && <Loader />}
       <View className="flex-row items-center justify-between mb-3">
         <Text className="text-lg font-bold text-white">{title}</Text>
         <Link href={`movie/category/${categoryId}`}>
