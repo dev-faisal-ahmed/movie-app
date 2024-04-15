@@ -8,7 +8,7 @@ export const apiUrl = {
   top_rated: `${baseUrl}/movie/top_rated`,
   movieDetails: (movieId: string) => `${baseUrl}/movie/${movieId}`,
   movieCredits: (movieId: string) => `${baseUrl}/movie/${movieId}/credits`,
-  personDetails: (personId: string) => `${baseUrl}/credit/${personId}`,
+  personDetails: (personId: string) => `${baseUrl}/person/${personId}`,
   similarMovies: (movieId: string) => `${baseUrl}/movie/${movieId}/similar`,
 };
 
@@ -20,7 +20,6 @@ export const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNTFmYmVlZjczNmQ5ZWRmOWNkMTlmMzVlNjYzOGQ3OCIsInN1YiI6IjY2MWJkMGRkNWUxNGU1MDE4NWJiOGZlMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.JJzaHlsO9XGwBZ5g9pBRbCv-WTCCS9ea_HwcwIGnh04',
+    Authorization: `Bearer ${process.env.EXPO_PUBLIC_API_KEY}`,
   },
 };

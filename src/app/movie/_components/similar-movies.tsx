@@ -20,13 +20,16 @@ export function SimilarMovies({ movieId }: SimilarMoviesProps) {
 
   return (
     <>
-      <MovieList
-        data={data?.results || []}
-        title="Similar Movies"
-        url={`movie/similar/${movieId}`}
-        customClass="mt-6"
-      />
-      {loading && <Loader />}
+      {loading ? (
+        <Loader />
+      ) : (
+        <MovieList
+          data={data?.results || []}
+          title="Similar Movies"
+          url={`movie/similar/${movieId}`}
+          customClass="mt-6"
+        />
+      )}
     </>
   );
 }

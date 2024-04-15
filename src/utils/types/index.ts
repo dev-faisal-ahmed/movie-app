@@ -19,6 +19,7 @@ export type TMovieDetails = TMovieList & {
 };
 
 export type TCast = {
+  id: number;
   name: string;
   gender: 1 | 2;
   known_for_department: string;
@@ -29,15 +30,13 @@ export type TCast = {
 };
 
 export type TPerson = {
-  person: { profile_path: string; gender: 1 | 2; original_name: string };
-  department: string;
-  job: string;
-  media: {
-    original_title: string;
-    poster_path: string;
-    release_date: string;
-    media_type: string;
-  }[];
+  name: string;
+  place_of_birth: string;
+  profile_path: string;
+  birthday: string;
+  biography: string;
+  gender: number;
+  known_for_department: string;
 };
 
 export type TApiResponse<TData> = {

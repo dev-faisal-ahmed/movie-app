@@ -14,7 +14,7 @@ export function TrendingMovies() {
       <Text className="text-lg font-bold text-white mb-2">Trending</Text>
       <FlatList
         horizontal
-        data={data?.results.slice(0, 7)}
+        data={data?.results?.slice(0, 7)}
         style={{ flex: 1 }}
         contentContainerStyle={{ gap: 15 }}
         renderItem={(each) => (

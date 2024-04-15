@@ -4,14 +4,9 @@ import { TCast } from '@/utils/types';
 import { Link } from 'expo-router';
 import { Image, Text, View } from 'react-native';
 
-export function CastContainer({
-  name,
-  profile_path,
-  character,
-  cast_id,
-}: TCast) {
+export function CastContainer({ name, profile_path, character, id }: TCast) {
   return (
-    <Link href={`person/${cast_id}`}>
+    <Link href={`/person/${id}`}>
       <View style={{ width: 100 }}>
         <Image
           style={{ width: 100, height: 100 }}
